@@ -1,0 +1,20 @@
+Example of the def function in Python
+def is used to store commands under a name that we can call later to use the whole function.
+
+Example:
+
+def hello_people (): #defining what the hello_people command will store
+    name=input ("Add your name: ")
+    print ("hello, ", name)
+    print ("How is your day going?")
+    print ("do you need any coffee?")
+    print ("Love you, bye!")
+#all these commands are under the command hello_people. When we call it later, it will execute all these functions
+hello_people () 
+
+#The result of the code will be:
+Add your name: xxxxxxx
+hello,  xxxxxxx
+How is your day going?
+do you need any coffee?
+Love you, bye!
