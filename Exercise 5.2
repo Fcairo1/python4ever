@@ -1,0 +1,38 @@
+5.2 Write a program that repeatedly prompts a user for integer numbers until the user enters 'done'. Once 'done' is entered, print out the largest and smallest of the numbers. If the user enters anything other than a valid number catch it with a try/except and put out an appropriate message and ignore the number. Enter 7, 2, bob, 10, and 4 and match the output below.
+
+largest = None
+smallest = None
+while True:
+    num = input("Enter a number: ")
+    if num == "done":
+        break
+    print(num)
+
+print("Maximum", largest)
+
+
+-----------------------
+
+
+##I didnt understand how to do it, had to look it up, was too confused##
+correct result I found online (comments are my own)"
+
+
+largest = None # declaring largest as null
+smallest = None # declaring smallest as null
+while True: # creating an infinite loop
+    try: #try/except used to check if the user input a correct value (numbers) 
+        num = input("Enter a number: ") # declaring the variable  'num', that takes the value of the user input
+        if num == "done": # This is the END of the infinite loop. When the user inputs "done", the loop will stop
+            break
+        n = int(num) # converting user input to number
+        if largest is None or n > largest: # checking if largest is zero OR if the input is largest than the number
+            largest = n # in case any of the above conditions is true, largest will be the selected number (which means it will always assume the biggest input value)
+        elif smallest is None or n < smallest: #  when smallest is zero OR input number is smaller than smallest, it will:
+            smallest = n # declare n as the smallest
+    except ValueError: # the error to be shown in case user inputs an invalid thing
+        print("Invalid input")
+        continue # will continue the loop
+print("Maximum is", largest) # printing the maximum value
+print("Minimum is", smallest) # printing smallest value
+
